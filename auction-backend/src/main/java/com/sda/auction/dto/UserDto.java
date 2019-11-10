@@ -14,6 +14,8 @@ import javax.validation.constraints.Size;
 //@Builder //pt designe pattern
 public class UserDto {
 
+    private Integer id;
+
     @NotEmpty(message = "Please insert your first name")
     @Pattern(regexp = "[A-Za-z]+", message = "Letters only")
     private String firstName;
@@ -28,5 +30,6 @@ public class UserDto {
     @Pattern(regexp = "((.*)[A-Z]+(.*))", message = "Passsword should contain at least one capital letter!")
     @Size(min = 6, message = "Password must be at least 6 characters long")
     private String password;
+
 
 }
