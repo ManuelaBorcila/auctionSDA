@@ -11,7 +11,7 @@ public class ApplicationConfig {
     @Bean(name = "messageSource")
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-        messageSource.setBasename("classpath:/messages/validation/message");
+        messageSource.setBasename("classpath:/validation/message");
         return messageSource;
     }
 

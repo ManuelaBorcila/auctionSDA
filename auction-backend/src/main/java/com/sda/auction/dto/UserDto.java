@@ -7,7 +7,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Data
+@Data //pt get si set
 @EqualsAndHashCode
 //@AllArgsConstructor
 //@NoArgsConstructor
@@ -22,7 +22,7 @@ public class UserDto {
     @Pattern(regexp = "[A-Za-z]+", message = "Letters only")
     private String lastName;
 
-    @Email(message = "error.user.email.pattern")
+    @Email(message = "{error.user.email.regex}")
     private String email;
 
     @Pattern(regexp = "((.*)[A-Z]+(.*))", message = "Passsword should contain at least one capital letter!")
